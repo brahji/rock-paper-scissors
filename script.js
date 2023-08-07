@@ -12,7 +12,7 @@ function getPlayerChoice() {
 
 let playerscore = 0;
 let computerscore = 0;
-let gamescore = playerscore + " - " + computerscore;
+const gamescore = playerscore + " - " + computerscore;
 const playerchoice = getPlayerChoice();
 const computerchoice = getComputerChoice();
 
@@ -21,20 +21,33 @@ console.log(playerchoice);
 
 function playRound(getPlayerChoice, getComputerChoice) {
     if (playerchoice == computerchoice) {console.log("Tie!" + gamescore);}
-        else if (playerchoice == 'rock' && computerchoice == 'scissors') {++playerscore; console.log("You win!" + gamescore);}
-        else if (playerchoice == 'rock' && computerchoice == 'paper') {++computerscore; console.log("You lose!" + gamescore);} 
-        else if (playerchoice == 'scissors' && computerchoice == 'paper') {++playerscore; console.log("You win!" + gamescore);} 
-        else if (playerchoice == 'scissors' && computerchoice == 'rock') {++computerscore; console.log("You lose!" + gamescore);} 
-        else if (playerchoice == 'paper' && computerchoice == 'scissors') {++computerscore; console.log("You lose!" + gamescore);} 
-        else if (playerchoice == 'paper' && computerchoice == 'rock') {++playerscore; console.log("You win!" + gamescore);} 
-}
+        else if (playerchoice == 'rock' && computerchoice == 'scissors') {console.log("You win! Rock beats scissors."); ++playerscore;}
+        else if (playerchoice == 'rock' && computerchoice == 'paper') {console.log("You lose! Paper beats rock."); ++computerscore;} 
+        else if (playerchoice == 'scissors' && computerchoice == 'paper') {console.log("You win! Scissors beats paper."); ++playerscore;} 
+        else if (playerchoice == 'scissors' && computerchoice == 'rock') {console.log("You lose! Rock beats scissors."); ++computerscore;} 
+        else if (playerchoice == 'paper' && computerchoice == 'scissors') {console.log("You lose! Scissors beats paper."); ++computerscore;} 
+        else if (playerchoice == 'paper' && computerchoice == 'rock') {console.log("You win! Paper beats rock."); ++playerscore;} 
+
+};
 
 playRound()
 
-console.log(gamescore);
+
+function game(){
+    for(let i = 0; i === 5; i++) {
+        if
+    }
+};
+
+
+console.log(`${playerscore} - ${computerscore}`)
 
 //function game(){
    // for(let i = 0; i === 5; i++) {
 
     //}
 //};
+
+
+
+
